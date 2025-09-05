@@ -99,7 +99,7 @@ How Apply works:
 ### Writing Files Inner Workings
 When Void wants to change your code, it just writes to a text model. This means all you need to know to write to a file is its URI - you don't have to load it, save it, etc. There are some annoying background URI/model things to think about to get this to work, but we handled them all in `voidModelService`.
 
-### Void Settings Inner Workings
+### Phoenix Settings Inner Workings
 We have a service `voidSettingsService` that stores all your Void settings (providers, models, global Void settings, etc). Imagine this as an implicit dependency for any of the core Void services:
 
 <div align="center">

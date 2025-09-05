@@ -191,7 +191,7 @@ ${telemetryText}
 
 ${restartString}
 
-Void separately records basic usage like the number of messages people are sending. If you'd like to disable Void metrics, you may do so in Void's Settings.
+Phoenix separately records basic usage like the number of messages people are sending. If you'd like to disable Phoenix metrics, you may do so in Phoenix's Settings.
 `;
 
 	return telemetryDescription;
