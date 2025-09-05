@@ -831,7 +831,7 @@ export const OllamaSetupInstructions = ({ sayWeAutoDetect }: { sayWeAutoDetect?:
 		>
 			<ChatMarkdownRender string={`3. Run \`ollama pull your_model\` to install a model.`} chatMessageLocation={undefined} />
 		</div>
-		{sayWeAutoDetect && <div className=' pl-6'><ChatMarkdownRender string={`Void automatically detects locally running models and enables them.`} chatMessageLocation={undefined} /></div>}
+		{sayWeAutoDetect && <div className=' pl-6'><ChatMarkdownRender string={`Phoenix automatically detects locally running models and enables them.`} chatMessageLocation={undefined} /></div>}
 	</div>
 }
 
@@ -1470,7 +1470,7 @@ export const Settings = () => {
 								{/* Metrics section */}
 								<div className='max-w-[600px]'>
 									<h2 className={`text-3xl mb-2`}>Metrics</h2>
-									<h4 className={`text-void-fg-3 mb-4`}>Very basic anonymous usage tracking helps us keep Phoenix running smoothly. You may opt out below. Regardless of this setting, Void never sees your code, messages, or API keys.</h4>
+									<h4 className={`text-void-fg-3 mb-4`}>Very basic anonymous usage tracking helps us keep Phoenix running smoothly. You may opt out below. Regardless of this setting, Phoenix never sees your code, messages, or API keys.</h4>
 
 									<div className='my-2'>
 										{/* Disable All Metrics Switch */}
