@@ -21,7 +21,7 @@ import { IAction } from '../../../../base/common/actions.js';
 
 
 const notifyUpdate = (res: VoidCheckUpdateRespose & { message: string }, notifService: INotificationService, updateService: IUpdateService): INotificationHandle => {
-	const message = res?.message || 'This is a very old version of Void, please download the latest version! [Void Editor](https://voideditor.com/download-beta)!'
+	const message = res?.message || 'This is a very old version of Phoenix, please download the latest version! [Phoenix Editor](https://phoenixeditor.com/download-beta)!'
 
 	let actions: INotificationActions | undefined
 
@@ -31,13 +31,13 @@ const notifyUpdate = (res: VoidCheckUpdateRespose & { message: string }, notifSe
 		if (res.action === 'reinstall') {
 			primary.push({
 				label: `Reinstall`,
-				id: 'void.updater.reinstall',
+				id: 'phoenix.updater.reinstall',
 				enabled: true,
 				tooltip: '',
 				class: undefined,
 				run: () => {
 					const { window } = dom.getActiveWindow()
-					window.open('https://voideditor.com/download-beta')
+					window.open('https://phoenixeditor.com/download-beta')
 				}
 			})
 		}
@@ -45,7 +45,7 @@ const notifyUpdate = (res: VoidCheckUpdateRespose & { message: string }, notifSe
 		if (res.action === 'download') {
 			primary.push({
 				label: `Download`,
-				id: 'void.updater.download',
+				id: 'phoenix.updater.download',
 				enabled: true,
 				tooltip: '',
 				class: undefined,
@@ -59,7 +59,7 @@ const notifyUpdate = (res: VoidCheckUpdateRespose & { message: string }, notifSe
 		if (res.action === 'apply') {
 			primary.push({
 				label: `Apply`,
-				id: 'void.updater.apply',
+				id: 'phoenix.updater.apply',
 				enabled: true,
 				tooltip: '',
 				class: undefined,
@@ -72,7 +72,7 @@ const notifyUpdate = (res: VoidCheckUpdateRespose & { message: string }, notifSe
 		if (res.action === 'restart') {
 			primary.push({
 				label: `Restart`,
-				id: 'void.updater.restart',
+				id: 'phoenix.updater.restart',
 				enabled: true,
 				tooltip: '',
 				class: undefined,
@@ -83,21 +83,21 @@ const notifyUpdate = (res: VoidCheckUpdateRespose & { message: string }, notifSe
 		}
 
 		primary.push({
-			id: 'void.updater.site',
+			id: 'phoenix.updater.site',
 			enabled: true,
-			label: `Void Site`,
+			label: `Phoenix Site`,
 			tooltip: '',
 			class: undefined,
 			run: () => {
 				const { window } = dom.getActiveWindow()
-				window.open('https://voideditor.com/')
+				window.open('https://phoenixeditor.com/')
 			}
 		})
 
 		actions = {
 			primary: primary,
 			secondary: [{
-				id: 'void.updater.close',
+				id: 'phoenix.updater.close',
 				enabled: true,
 				label: `Keep current version`,
 				tooltip: '',
