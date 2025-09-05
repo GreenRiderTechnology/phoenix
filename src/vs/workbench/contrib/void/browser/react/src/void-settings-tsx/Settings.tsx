@@ -1470,7 +1470,7 @@ export const Settings = () => {
 								{/* Metrics section */}
 								<div className='max-w-[600px]'>
 									<h2 className={`text-3xl mb-2`}>Metrics</h2>
-									<h4 className={`text-void-fg-3 mb-4`}>Very basic anonymous usage tracking helps us keep Void running smoothly. You may opt out below. Regardless of this setting, Void never sees your code, messages, or API keys.</h4>
+									<h4 className={`text-void-fg-3 mb-4`}>Very basic anonymous usage tracking helps us keep Phoenix running smoothly. You may opt out below. Regardless of this setting, Void never sees your code, messages, or API keys.</h4>
 
 									<div className='my-2'>
 										{/* Disable All Metrics Switch */}
@@ -1491,38 +1491,38 @@ export const Settings = () => {
 								</div>
 
 								{/* AI Instructions section */}
-								<div className='max-w-[600px]'>
-									<h2 className={`text-3xl mb-2`}>AI Instructions</h2>
-									<h4 className={`text-void-fg-3 mb-4`}>
-										<ChatMarkdownRender inPTag={true} string={`
-System instructions to include with all AI requests.
-Alternatively, place a \`.voidrules\` file in the root of your workspace.
-								`} chatMessageLocation={undefined} />
-									</h4>
-									<ErrorBoundary>
-										<AIInstructionsBox />
-									</ErrorBoundary>
-									{/* --- Disable System Message Toggle --- */}
-									<div className='my-4'>
-										<ErrorBoundary>
-											<div className='flex items-center gap-x-2'>
-												<VoidSwitch
-													size='xs'
-													value={!!settingsState.globalSettings.disableSystemMessage}
-													onChange={(newValue) => {
-														voidSettingsService.setGlobalSetting('disableSystemMessage', newValue);
-													}}
-												/>
-												<span className='text-void-fg-3 text-xs pointer-events-none'>
-													{'Disable system message'}
-												</span>
-											</div>
-										</ErrorBoundary>
-										<div className='text-void-fg-3 text-xs mt-1'>
-											{`When disabled, Void will not include anything in the system message except for content you specified above.`}
-										</div>
-									</div>
-								</div>
+{/*								<div className='max-w-[600px]'>*/}
+{/*									<h2 className={`text-3xl mb-2`}>AI Instructions</h2>*/}
+{/*									<h4 className={`text-void-fg-3 mb-4`}>*/}
+{/*										<ChatMarkdownRender inPTag={true} string={`*/}
+{/*System instructions to include with all AI requests.*/}
+{/*Alternatively, place a \`.voidrules\` file in the root of your workspace.*/}
+{/*								`} chatMessageLocation={undefined} />*/}
+{/*									</h4>*/}
+{/*									<ErrorBoundary>*/}
+{/*										<AIInstructionsBox />*/}
+{/*									</ErrorBoundary>*/}
+{/*									*/}{/* --- Disable System Message Toggle --- */}
+{/*									<div className='my-4'>*/}
+{/*										<ErrorBoundary>*/}
+{/*											<div className='flex items-center gap-x-2'>*/}
+{/*												<VoidSwitch*/}
+{/*													size='xs'*/}
+{/*													value={!!settingsState.globalSettings.disableSystemMessage}*/}
+{/*													onChange={(newValue) => {*/}
+{/*														voidSettingsService.setGlobalSetting('disableSystemMessage', newValue);*/}
+{/*													}}*/}
+{/*												/>*/}
+{/*												<span className='text-void-fg-3 text-xs pointer-events-none'>*/}
+{/*													{'Disable system message'}*/}
+{/*												</span>*/}
+{/*											</div>*/}
+{/*										</ErrorBoundary>*/}
+{/*										<div className='text-void-fg-3 text-xs mt-1'>*/}
+{/*											{`When disabled, Phoenix will not include anything in the system message except for content you specified above.`}*/}
+{/*										</div>*/}
+{/*									</div>*/}
+{/*								</div>*/}
 
 							</div>
 
